@@ -1,0 +1,324 @@
+\documentclass[reprint,amsmath,amssymb,apr,aip,onecolumn, 11pt]{revtex4-1}
+\usepackage[ruled]{algorithm2e}
+\SetKwInOut{Input}{Input}
+\SetKwInOut{Output}{Output\,}
+\DontPrintSemicolon
+
+
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{mathptmx}
+\usepackage{times}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{dcolumn}
+\usepackage{bm}
+\usepackage{units}
+\usepackage{color}
+\usepackage{soul}
+\usepackage{multirow}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+
+
+\newcommand{\floor}[1]{\lfloor #1 \rfloor}
+%\usepackage{xcolor}
+%\pagecolor[HTML]{efefef}
+\graphicspath{{figures/}}
+\renewcommand{\baselinestretch}{1.00}
+\newcommand{\pdfscale}{0.4}
+\newcommand{\pdfscaletwocolumn}{0.37}
+
+\bibliographystyle{naturemag}	
+
+\begin{document}
+	
+	\title{MAN - a concise model for the mind}
+	
+	\author{Nandakumar Sasidharan Rajalekshmi}
+%	\affiliation{Independent research}
+	
+
+	
+	
+	\date{\today}
+	\begin{abstract}
+	Memory and attention have been identified as the main components of cognitive models. In this work, the memory is modelled as associative and is placed in a feedback loop with an attention network. Several functional aspects of the mind, such as perception, logical thoughts, intuition, dreams, mind wandering, emotion, and empathy, are explained using this simple structure. The model also gives suggestions on sources of attention deficiency and a possible path to mitigate them.
+		
+	\end{abstract}
+	
+	%	\begin{IEEEkeywords}
+	%		In-memory computing,  Homomorphic encryption, Polynomial multiplication
+	%	\end{IEEEkeywords}
+	\maketitle
+	\section{Introduction}
+	
+	
+	
+	\begin{figure}[h!]
+		\centerline{\includegraphics[width=0.65\linewidth]{figures/figure_man_animal_brain.pdf}}
+		\caption{(a) An illustration of a system where the neural network layers are closely connected with the physical body to manage sensory and motor activities as expected in simpler organisms. (b) An illustration similar to (a) but with additional neural network layers which are not immediately connected with the physical body that allows additional memory and abstract representations. }
+		\label{fig:man_animal}
+	\end{figure}
+	
+	The uniqueness of the human brain is that it has significantly more layers of neurons that are not directly associated with various physical activities, such as sensory and motor activities, compared to simpler organisms\cite{2014_Hofman, 2011_DeFelipe} (Figure \ref{fig:man_animal}). This gives us additional memory that stores events over longer periods and allows us to compare and make associations among information that are not co-located in space or time. This enabled us to record patterns in our environment, predict the future based on past experiences, and plan strategies for desired outcomes. This additional memory and processing from the extra layers of neurons led to logical thinking, intuition, creativity, and more complex emotional responses. This memory of the past experiences enabled us to successfully respond to new environmental challenges, made us curious about new possibilities and helped us to spread across the globe and to adapt to different climatic situations. 
+	
+	
+	
+	The source of information for this memory has always been the experience of the person. It is important to note that the relation between memory and experiences is somewhat reciprocal\cite{Canli_2000, Tyng_2017}. That is, as our experiences formed memory, recollection of the memory was also able to recreate certain experiences within the person.  When we realised symbols can trigger certain memories within us, we found a way to transfer experiences and knowledge of one person to another. This realisation gradually led to the development of symbolic languages. As a need arose to communicate information without physical proximity, and later as the amount of information accumulated started to grow beyond what we can hold in our memory, we started to note them down using symbols, on rocks, leaves, papers, and recently on electronic chips. As the accumulated information grew, it also helped us to develop new tools and methods to record them.
+	
+	As time progressed, we are now at a point where the tools being developed are capable of destroying the life as we know it. Today, several environmental indicators suggest that we might be doing it. It is puzzling that even when we are aware of the negative impacts, we find it very challenging to change the underlying patterns and habits. Hence, understanding the nature of the human mind, not just to manage diseases or to replicate in hardware for automation, but for a proper understanding of our behavior, is crucial for a peaceful coexistence of human beings and the survival of other species. This motivates the work here to formulate a model for the mind that is simple and concise enough for easy understanding, and at the same time sophisticated enough to capture the complex behavior of the mind. 
+	
+	
+	Our attempts to understand the nature of the mind are as old as our civilizations. While there were times, when we believed that the mind is separate from the body, today, it is widely agreed that mental activity is rooted in the human nervous system. Our initial approaches to understanding and modeling the mind were based on self-reflection and behavioral evaluation of willing participants. We developed various components to capture different aspects and put them together to form a model that captures the maximum number of characteristics of the mind.  In 1968, Richard Atkinson and Richard Shiffrin proposed a multi-store model for our memory, which has separate memory for short-term store (STS) and long-term store (LTS) of data\cite{ATKINSON1968, Atkinson_1971}. They suggested rehearsal as a method that transfers information from STS to LTS and probing that retrieves information from LTS to STS. In probing, some keywords or queries are placed in the STS, which retrieves related information from LTS. While they modeled some aspects of the memory,  logical reasoning and more complex tasks of the mind were left out. This has led to the development of symbolic models, which include a collection of symbols and rules. ACT (Atomic Components of Thoughts), which later evolved to ACT-R (Adaptive Control of Thought-Rational)\cite{Anderson_1974, Anderson_1998}  and SOAR\cite{Newell_1990} are examples. They were designed to perform cognitive tasks, based on known facts stored in declarative memory and rules stored in procedural memory. ACT-R models their memory as associative and captures the limited capacity of attention by using buffers of limited size.  These models are more interpretable and are still being developed. However, their focus on hardware implementation forces them to include several details suited for digital computers rather than the original biological systems. 
+	
+	%	connectionist models\\
+	As the neuro-imaging technologies began to provide more details on the general architecture,  cellular structure, and signal patterns within the brain, we started with models known as connectionist models.  The brain is composed of cells known as neurons, which are interconnected via junctions called synapses. These synapses are able to attenuate and delay the signal propagation through them. The brain is believed to learn, store, and adapt to situations by adjusting the strength of these synaptic connections. Connectionist models of the mind mimic this aspect of the brain. They implement cognitive functions using an array of interconnected artificial neurons. The connection strength of the neurons is adjusted gradually using learning algorithms to implement a desired function. Today's artificial neural networks (ANNs) come in this group. The success of the connectionist models has led them to be adopted and integrated as part of some of the earlier symbolic models, forming hybrid versions.
+	
+	The model we present can be considered a hybrid model. We discuss the higher-level organization and how different components come together to explain the nature of the mind. We assume that memory and learning are implemented using neural networks. However, we do not explore the implementation details in this work. The model is formulated using personal observations of the mind. Then the model is used to explain different functionalities of the mind. The results are then compared with the medical and neuro-imaging observations. Then we discuss the first-principles approach and the intuition behind the model. 
+	
+%	Uniqueness of human brain is extra layers of neurons compared to other animals.  The question is how do we organize this additional neural networks that can explain the nature of mind. From a survival point of view, the purpose of the mind is to observe and record the rhythms and patterns of its natural environment  and respond accordingly to keep the organism functional and alive. The response can be  in the form of either thoughts, symbolic communication, or physical activity. 
+	
+	
+	\section{The Model }
+	Let us first look at a few aspects of the mind that anyone can notice if we pay attention. 
+	
+	\begin{enumerate}
+		\item Memory plays a central role in our mind. This memory stores impressions and experiences since childhood. 
+		
+		\item	The entire memory is not in our awareness all the time. What we pay attention to right now is what is in our awareness. 
+		
+		\item	We can pay attention to the thoughts from our memory,  sensations within the body, or sensory inputs from outside.
+		
+		\item When we  focuses on an object, we tend to remember information related with that object.  
+		
+		\item	Our thoughts are made of memories, that we collected through different forms of experiences. 
+		
+		\item	The capacity of our attention is limited. For example, our focus on this text would be limited when our attention is engaged in some other thoughts. 
+		
+		\item	What we pay attention to, gets recorded in our memory.  
+		
+		\item	Moments or events of emotion, interest, or desire are easily recorded in the memory. Repetition also helps to enhance memory.
+	 	
+%	 	\item	Our ability to recover a specific information from memory depends on placing an appropriate query in our attention. The memory responds with associated information. This new information comes into our attention and it also becomes a  query to the memory to extract the next piece of information. This continuous feedback can create a train of thoughts.  
+	 	
+%	 	\item If we encounter something that we cannot relate with any of our previous memory, for example let us say a new word in a new language, it will be recorded in the memory, but we may find it difficult to recover, because we do not have an associated query. In  this case the word itself becomes the query. When we hear it again, the memory responds indicating that we have heard the word before. 
+	 	
+	 \end{enumerate}
+	
+	
+	
+	\begin{figure}[h!]
+		\centerline{\includegraphics[width=0.8\linewidth]{figures/figure_man_model.pdf}}
+		\caption{(a) The model for the mind where the memory and attention are in a feedback loop. Attention network is a combination of attention channels dedicated for signals from different sources. Present experiences denotes a combination of  the signals received from sense organs (Outer experiences) and sensations within the body (Inner experiences). What passes through the attention channel becomes input to the memory. The memory is modeled as associative memory, which records its inputs in an associative manner. When the memory is probed with a known input, its output  (Past impressions) help to give context and meaning to the inputs of attention. (b) A simplified line diagram of the model. The attention channel is modeled as a combination of multiple attention channels that acts as pathways for signals from both inside and outside the physical body. The information from different channels are recorded in the memory in an associative manner. }
+		\label{fig:model}
+	\end{figure}
+	
+	
+		We compose our model for the mind with memory and attention in a feedback loop (Figure \ref{fig:model}(a)). For simplicity we call this memory-attention-network (MAN) model. To capture the characteristic of the mind that responds with related information when presented with an input, the memory is modeled as an associative memory (AM). That is, if any part of the AM holds information that matches its input then the memory first responds with a complete or partial replica of the input itself. This gives a sense of familiarity and helps us recognize familiar objects even from partial inputs by auto-completing them within the mind. Upon sustained attention, the memory activates associated information such as impressions via other sense organs, different levels of abstractions and their combinations, and other details which help us to recognize, relate to, or respond to the input. We name all these related information together as past impressions. If the memory finds no match for the input, it will attempt to replicate the input and this leads to the storage of the new data. The new data will be recorded in association with other related information, which could be previous data points in a sequence or context provided by the inputs from other sense organs. 
+%		
+		
+		 Attention network can be viewed as a combination of attention channels each with its own capacity limits on the number of items that can pass through at a time (Figure \ref{fig:model}(b)). Each channel corresponds to a different input source. Each attention channel input has two parts; present experience and past impressions. The past impressions come from memory and are a record of the experiences from the past. The sources of present experience are signals from the sense organs (outer experiences) and the sensations within the body (inner experiences) such as emotions,  pain, hunger, and (un)pleasantness. The signals that pass through the attention network reach memory. The information from the different channels and their associations are recorded in the memory. The memory also generates a response using its past impressions in response to the inputs from the attention network. This memory response also becomes an input to the attention. The attention channels can choose to focus on the present information or the memory response or on a combination of them. 
+		 
+		 
+		 If the attention is focused on the present experiences, this lead the maximum inflow of new information. This helps is maximizing the experiences of new situation and learning. This phase could be energy intensive as the memory is constantly memorizing. During regular and familiar tasks, the attention focuses on a  combination of present experiences and past impressions. Here the mind could operate using partial and sparse external input auto completed by the past impressions for fast and efficient responses. Now, if the attention is focused on the Past impressions, it completes the feedback loop and leads to a train of thoughts. This feedback loop can help in memory reinforcement by repetition, developing abstractions and intuitions, and deep thoughts. This 'lost in thoughts' state could also fully or partially block the attention channels from accepting signals corresponding to the present experiences.    
+
+		
+		In the memory, information from different sources also maintain association. For example, depending on whether you are at home, office or school, you consciously or unconsciously expect a certain visual, sounds, smell, and feel. You would generally notice, if one of the sense input does not match with the rest. Now, if one of the attention channels completes the feedback loop by focusing on the memory output and generates a thought sequence, it could potentially evoke associated memory from other channels and they could  clog the corresponding attention channels as well. 
+		
+		  The AM is assumed to have a large capacity and a very long data retention period. Here, similar (same source) and associated data get recorded in physically closer space, and dissimilar (different sources) data will be recorded in physically separate space. The data from different sources also form associations if they were active together. This data recording based on similarity leads to a certain compartmentalization within the memory.
+		
+		
+		 
+%			\begin{figure}[h!]
+%			\centerline{\includegraphics[width=0.6\linewidth]{figures/figure_comparison.pdf}}
+%			\caption{Associative memory versus standard digital memory. Associative memory when probed with information finds the closest match from its records and outputs related information. On the other hand, a standard digital memory will output data stored at an exact location when probed with the corresponding address.}
+%			\label{fig:compare}
+%		\end{figure}
+	
+		
+
+\section{Functioning of the model}
+%In the sections below focus primarily on how the model functions. Its neuroscience can be discussed later. 
+In this section, we discuss how the model can be used to explain different behaviors of the mind. 
+
+
+
+\subsection{Perception, memorization and learning}
+
+In the model, what passes through the attention network is what we perceive. To recognize what is perceived we need the support of the memory (AM). When an object or symbol comes into the focus of the attention network, the closest matching record from the AM is activated giving us a sense of familiarity, and this record will activate related information giving a sense of meaning. For example, if we hear the word `flute' either a picture or a sense of its sound or both comes to forefront of attention, giving us a feeling of recognition. Therefore, before the model can recognize objects, it needs to form memory. 
+
+When the model encounters an unfamiliar signal, the memory fails to respond with a matching past impression. This maximizes the available attention bandwidth for the new input. Now we receive the input with maximum details and the AM will attempt to create a `past impression' signal by replicating its input. This process will form a memory of the input. Once again this new record will be formed in association with other familiar objects, symbols, sounds, or experiences which are adjacent in time or space. This way, the memory does not form isolated impressions rather meaningful sequences. 
+
+In addition to the memory that we acquire from outside, our body also carries a large amount of memory in the form of genetics. This innate memory modifies our priorities and learning behavior through survival instincts. We experience the survival instincts in the form of different sensations within the body. Events that generate these additional inner experiences ((un)pleasantness, emotions, pain, pleasure) via additional awareness channels, has a chance to form more associations and hence lead to stronger memories.  Events that lead to less or no inner experiences will need more effort to attend to and will need more repetition to form an equally vivid memory.
+
+For a human baby, the easiest way to learn is to mimic. They learn to walk and talk by observing and mimicking their parents. They also earn decision making skills from their experiences. For example, a newborn, when it feels hungry, the body prompts it to cry. The baby gets fed, and the physical experience signals satisfaction. The memory records this successful sequence, and the memory will trigger this sequence again even at the slightest indication of hunger in the body.  Now, depending on the response of the parents, the child's memory will record different scenarios, and over a period of time, it will have several successful and unsuccessful response sequences to choose from to meet its physical needs. The model can capture these behaviors. 
+
+
+\subsection{Abstraction, Logical thinking and Intuition \label{sec:abs_intuition}}
+
+ Abstraction means forming associations between common features that emerge from several examples. Let us examine it using an example. If I drop a stone, it will fall to the ground. If I drop a cup, it will fall to the ground. If I drop a ball, it will fall to the ground. These are all true in my observation and experience. Now, the AM does not store all three as independent sequences. Falling to the ground is common among these three. As I gain experience with more objects, the mind detects a feeling of heaviness in the hands as a common factor. Then the model will form an association between the feeling of heaviness and the fall when dropped. With additional experiences, the mind may detect that, however light, almost all objects fall to the ground when dropped. This finding of a common factor is a simple example of abstraction. 
+ 
+ What is true in our experience is what we will consider logical. Or in other words, if something happens as per our expectations, we will consider it logical. If a sequence of events happens and the result matches what is predicted by the mind, it is perceived as logical. The source of experience could also be indirect, where the experience of another person received via communication is accepted as true. What is logical can also be deduced by combining smaller logical facts or events.  Let $A->B$ ($A$ implies $B$) and $B->C$ be two independent logically true statements for a person. If these two statements are recorded as sequences within the AM, because of the feedback structure in the model, it will naturally deduce the transition from  $A->B->C$.  If the mind encounters this sequence repeatedly, it may learn a direct relation between $A$ and $C$ and will produce $A->C$ without the intermediate step $B$, which we interpret as intuition. 
+ 
+ Essentially, the model suggests that the mind is replicating the outside world in its memory, runs the sequence through the attention-memory loop during thoughts or memory consolidation processes, forms logical ideas, forms higher-level associations, and gradually develops abstractions and intuitions. 
+
+
+
+\subsection{Emotion and empathy}
+
+The reciprocal relation between memory and experience in the model can be used to explain emotions. As the experiences create memory, the recollection of memories is also capable of generating a certain impression of the experiences within the system.  For example, if a particular sequence of events has led to pain in the past, in the future, when a similar situation starts to happen, the model will automatically start to project the painful outcome. The body will experience this expectation as fear or anxiety. If the outcome in the past was pleasant, in future, the body will experience excitement in expectation. Similarly, various physical experiences from the past projected into the future will create different emotional responses.
+
+Empathy is our ability to experience and relate to other people's mental and emotional states. The model that records external sequences and corresponding inner experiences in association will be able to capture this behavior. As we observe someone going through a difficult situation, the model will be able to recall a similar sequence from our past memories. This will automatically evoke at least a mental impression of the corresponding physical and emotional situation of another person. This ability to recreate another person's inner situation within ourselves, by virtue of our mind's character to mimic, produces empathy.  
+
+\subsection{Ability to ask question}
+Our ability to ask questions potentially originates from our ability to predict events, based on memory. Our success in prediction is also recorded as a sequence that careful observation leads to successful prediction and new knowledge. Now, when we encounter an event that we are not able to predict, we start a process of more careful observation. This phenomenon, when expressed using languages, we call it asking questions. Hence, our model that stores sequences can potentially evolve the ability to ask questions. 
+
+\subsection{Symbolic language and language learning}
+
+Language at a very basic level is a collection of sounds/symbols used by a group of people to communicate about the world around us. The association between symbols and objects or events can be stored in an AM and easily retrieved. The model-based sequence generator can also generate the control signals to produce the sounds for speech (see also section \ref{sec:Generalization}). Initially, a small group of people would have used symbols to communicate, which increased their coordination and success rate in the survival process. Others' minds can make the association between language use and the success rate of this group, and will start to copy their behavior of using sounds/symbols to represent objects and ideas, leading to a wider adoption of language. 
+
+\subsection{Goal oriented behavior}
+Our goal orientation can be viewed as a different representation of our survival instinct. We seem to be engaging in activities which does not seem to be triggered by any of the cues in our immediate surroundings. How can the model explain this behavior? Our memory is probed not just by external sensory inputs, but also by our inner experiences. Here, our survival needs such as hunger, thirst, etc, will constantly remind us of our duties and goals to stay alive. The duties we take up and the goals we set are different strategies we have developed over time to meet the primary survival needs. The plans we set and strategies we design are based on our own trial and error experiments, or acquired via observation, reading or other means of communication. We may also unconsciously draw examples from different histories and stories we have read. Accordingly, our mind produces a sequence of actions or a pattern of activities, expecting a positive outcome. Our model with AM in a feedback loop with attention networks can potentially build such action sequences.  
+
+\subsection{Creative thinking and imagination}
+Creative thinking and imagination are processes where relatable ideas, visuals or symbols are put together that were never related in actual experience. The ability to form abstractions and to ask questions helps the model to put together pieces of information that were never actually together. Here, the question is instead of `why' it is `why not'. As we discussed earlier, when the AM is presented with different examples of similar objects or events, it tends to form associations between their abstract characteristics. This association at the abstract level happens naturally due to the characteristics of the AM to always store new content based on its correlation with the existing content. During imagination, the associations formed at the abstract levels act as bridges that permit switching between different examples. 
+
+
+\subsection{Mind wandering and dreaming}
+
+
+The fundamental mechanism behind thinking, mind-wandering, and dreaming is essentially the same, though the contexts in which they happen are different. All of them are a sequence of interconnected impressions in the memory passing through your awareness. The AM in a feedback loop with the attention network can capture the basic mechanism behind all of them.  Thinking is a more active process that happens while awake, often to find a solution to a real-world problem. Mind-wandering is a more passive process, happens while awake, and is the free running of the feedback loop. Both of these happen while awake, and the body provides sufficient cues, making them more physically realistic. 
+
+Dreaming is mind-wandering while asleep. It may be triggered by recently active memory, emotions, or other noise. During sleep, there is a brain-body disconnect\cite{Jones_2018}, and certain parts of the brain become less active, reducing the physical contexts and cues, making the dreams more imaginative. As the content of the memory passes through the attention network, it may also arouse emotional responses like fear, anxiety, pleasure and joy. For example, suppose you are working under stress from time constraints. Now, when you go to sleep, the work-related thoughts could still be active. The mind will capture this emotion at an abstract level and will activate associated experiences from the past. The feedback loop will build a cinema using the associated pieces. Now you may dream of running to reach somewhere on time, or trying hard to finish an exam on time, but never really getting to the end point. As you go through the dream, you will once again experience the stress. Recording experiences in an associative manner within the MAN model can potentially recreate this scenario. 
+
+
+\subsection{Generalization \label{sec:Generalization}}
+
+\begin{figure}[h!]
+	\centerline{\includegraphics[width=1\linewidth]{figures/figure_model_generalization.pdf}}
+	\caption{(a) Associative memories may potentially cascade with each other to copy information from one region to another or to generate more complex sequences. (b) An AM circuit that forms a feedback loop around itself without the attention network. (c) The AM may also interface with the sensory motor network, which interacts with the musculoskeletal system to learn and generate the necessary control signal for various physical activities. }
+	\label{fig:model_generalization}
+\end{figure}
+
+Organising the neural circuits as associative memory has several benefits. From a survival point of view, the AMs could be a good candidate that can record and respond to external situations without any additional control logic. Its simplicity makes it amenable to being replicated in several roles. We discuss some possibilities here. An AM-like organization allows different neural circuits to talk to each other. It could copy information from one region to another or make more complex thought processes (Figure \ref{fig:model_generalization}a). The AM may feed back around itself without the intervention of the attention networks (Figure \ref{fig:model_generalization}b). This could be helpful for memory consolidation. Memory consolidation is a process hypothesized to happen during sleep, which causes the replay and repetition of fresh memories and helps to enhance their retention\cite{Diekelmann_2010}.  The same AM-based memory model can also be used to generate control signals for various internal and external physical activities, such as rhythmic functioning of the organs, speech, locomotion, and limb movements (Figure \ref{fig:model_generalization}c). When we learn a new activity, it require deliberate attention. However, with regular practices, we tend to gain a certain expertise where the sequence of operation could be executed with  minimum attention. The memory structure in Figure \ref{fig:model_generalization}c could be employed to model this situation. 
+
+
+
+\section{Neuroscience background}
+
+We gained early insights into the anatomy of the brain by successfully associating cognitive deficits with localized brain damage (lesions). Wernicke's aphasia, a language disorder with impaired comprehension of spoken and written language and with fluent but often nonsensical speech, is an interesting example. Carl Wernicke's deduction in this case gave insights into the language comprehension mechanism in the brain. Wernicke's area in the left temporal lobe lies next to the cortical area for hearing, and this area was assumed to be involved in spoken language recognition. Broca's area in the frontal lobe lies close to the region responsible for the motor representation of organs of speech such as the face, tongue, lips, and vocal chords. A nerve bundle known as the arcuate fasciculus serve as a communication highway between these areas. Wernicke established the nature of the association between these two areas. Language learning and comprehension begin in the spoken format. Articulation and writing skills are secondary skills that we gain in association with primary comprehension skills. However, the signals for articulation are memorized in Broca's area. Now, a damaged Wernicke's area impaired language comprehension, but left the skill for speech intact. However, without the associated comprehension, the speech became nonsensical. Later, Wernicke's insights helped predict the impacts of several brain lesions correctly. This work also established that similar data were stored in association, leading to a compartmentalization in the brain; at the same time, these different regions can develop associations to perform more complex activities.  
+
+
+
+However, the resolution and reliability of the lesion studies were limited. Later functional imaging techniques, such as electroencephalography (EEG), positron emission tomography (PET) and early functional magnetic resonance imaging (fMRI) allowed us to monitor brain cellular activities with higher resolution. Based on early lesion studies, neuro-images and behavioral analysis, psychologists started to model the brain into separate memory and attention regions, which were then used to design experiments to identify corresponding brain regions with higher accuracy. However,  due to the associative nature of data storage, one region might be active during several cognitive tasks, and hence isolating the specific role of each region is quite challenging. Hence, brain characterization involves a certain iterative refinement, where available data is used to create models and hypotheses that become the basis to design new experiments, and the process is still ongoing. 
+
+
+Below, we look at some evidence of the attention network and the models of memory provided by neuroscience and psychology. 
+
+\subsection{Attention network}
+
+In The Principles of Psychology, William James describes attention as ``the taking possession by the mind, in clear and vivid form, of one out of what seem several simultaneously possible objects or trains of thought"\cite{James_1890}. James distinguishes between voluntary and involuntary attention and discusses the capacity limits.  Helmholtz’s work on visual attention, the ability to shift focus within the field of vision without moving the eye, suggested involvement of neural mechanisms for prioritizing sensory input\cite{Helmholtz_1925,Carrasco_2011}. 
+The filter theory of attention proposed by Donald Broadbent suggests attention as a limited capacity system to effectively manage sensory overload based on experiments like dichotic listening tasks\cite{Broadbent_1958}.
+
+Experimentally establishing that the neural mechanism behind attention is distinct from that of memory is challenging since both of them could be distributed across multiple brain regions and be active simultaneously. Early evidence came from lesion studies and behavioral observations. Hemispatial neglect, where patients with parietal lobe damage showed a disability to respond to stimuli from one side of the space, without a memory deficit, suggested a separate neural mechanism\cite{HEILMAN1977, VALLAR1986}. Another set of studies evaluates attention using reaction time, which seems to vary based on the time of the day following a circadian rhythm\cite{Matchock2009, BLATTER2007}. Pharmacological interventions that selectively target neurotransmitters in the attention-related brain areas such as the prefrontal cortex (PFC), anterior cingulate cortex (ACC), and dorsal attention network (DAN) and seem to enhance attention without affecting memory, are also indicative of separate neural mechanisms\cite{SPENCER2000, Scahill2001}. 
+
+
+A more formal structure for the attention network comes from Michael Posner and Steven Petersen. They derived three subsystems for alerting, orienting, and executive control, which they mapped to different brain regions based on a combination of behavioral, lesion, and neuroimaging data.  Alerting was linked to the locus coeruleus and frontoparietal regions. Orienting was associated with the superior parietal lobule, temporoparietal junction, and frontal eye fields. Executive control was tied to the dorsolateral prefrontal cortex and anterior cingulate cortex\cite{Posner_1990}. Later, they developed an Attention Network Test to evaluate the efficacy of these subsystems based on reaction times, and their study suggests these subsystems are functionally independent\cite{Fan_2002}. A more recent study suggests these attention subsystems also recruit partially overlapping brain networks\cite{Markett_2022}. 
+
+
+
+
+
+%The advent of functional MRI (fMRI) and positron emission tomography (PET) in the 1990s allowed researchers to observe brain activity during attention tasks. Studies confirmed the involvement of frontoparietal networks and identified dynamic interactions between regions.  In 2002, Jin Fan and colleagues developed an  Attention Network Test, a behavioral task to measure the efficiency of the three attention subsystems\cite{Fan_2002}. This tool validated Posner’s model and was widely used in clinical and developmental studies. Advances in diffusion tensor imaging (DTI) and resting-state fMRI revealed the white matter tracts (e.g., superior longitudinal fasciculus) and functional connectivity underlying attention networks.
+ 
+
+\subsection{Memory}
+
+Lesion studies and behavioral observations provided the basis for early models of memory. For example, it has been observed that patients with prefrontal cortex damage show deficits in tasks that require short-term memory (STM), but not in tasks that require long-term memory (LTM). On the other hand, temporal lobe or hippocampus damage seems to spare simple STM tasks but affects LTM. This double dissociation led to the multi-store memory model proposed by Atkinson and Shiffrin\cite{ATKINSON1968}, which proposes functionally and physically separate brain regions for short-term and long-term storage. Later, considering the role played by the short-term store in not just holding but manipulating information for tasks like reasoning, decision making, and learning, they have been expanded to include additional functionalities and were termed as working memory (WM) by Baddeley and Hitch\cite{BADDELEY1974}.  This model was later expanded to add more brain regions to accommodate behaviors that the original model could not capture\cite{Baddeley_2000}. 
+
+However, if the WM is a physically separate structure is still debated\cite{Raaijmakers_Shiffrin_2003}.
+The primary limitation of a physically separate WM is its inability to provide meaning for its contents. We make sense of any external stimuli based on related information from our prior experiences. Therefore, to make sense of any content in the WM, it will have to constantly refer back to the LTM. Hence, it seems pointless to make a distinction between LTM and working memory. A more recent model, the embedded process model, proposed by Cowan\cite{Cowan1999,Cowan2021} suggests that what we perceive as WM is activated regions of the LTM, which are in the focus of attention. Later neuro-imaging studies have revealed the presence of attention networks in the brain, which are assumed to have a limited capacity. Attention network in combination with an LTM could have given the impression of a limited capacity working memory. 
+ 
+%Lately working memory and attention are being viewed as overlapping constructs. 
+
+
+Our model aligns more with the embedded process model. We assume that what we perceive as WM is activated regions of the LTM. Further, we model the LTM as AM, which is in a feedback loop with the attention network. It intrinsically captures the fact that we remember, retrieve, and understand data in association with prior experiences. We also incorporate inner experiences  to provide survival cues via additional awareness channels that makes remembering information critical for survival easier. It has been experimentally demonstrated that events that evokes an emotional response in the subjects are easily recorded in the memory\cite{LeDoux_2000,Phelps_2005}.
+
+%The characterisation of associative memory via behavioral studies has several challenges. Our capacity and speed of memorisation are dependent on several factors, including past experiences and emotional states. For example, a person trained in a medical profession will immediately capture the contents from a medical report, while for an outsider, it will sound like a foreign language. Now, even if the subject memorises random information, he may find it difficult to retrieve since it will be stored without proper association with the rest of the knowledge. Meanwhile, another subject of the same experiment can come up with a strategy to form pseudo relations between the random information and hence will be better equipped to retrieve the contents in future.  While we make efforts to minimize such biases, they are hard to eliminate. 
+ 
+
+
+
+%\textbf{Predictive Coding: }Modern theories suggest the brain uses predictive coding, where it generates expectations about incoming sensory data and adjusts based on discrepancies. This process, involving networks across the cortex, helps refine meaning efficiently.
+%Friston, K. (2010). "The free-energy principle: A unified brain theory?" Nature Reviews Neuroscience, 11(2), 127–138.
+%Clark, A. (2013). "Whatever next? Predictive brains, situated agents, and the future of cognitive science." Behavioral and Brain Sciences, 36(3), 181–204.
+
+
+
+
+
+
+
+
+
+	
+
+	
+	
+	\section{Discussion}
+	
+%	Why a new model
+The model is motivated by a first-principles approach. Being able to effectively record and respond to the natural cycles is an important aspect for any species on Earth. Hence, we assume the evolution will prefer a model that can learn/generate sequences and associations and adapt to varying outside situations. The model should be simple and self-sustained. A set of logical rules or intelligent control agents to manage and retrieve information seems less likely. The MAN model, which replicates the external sequences, can capture the natural cycles, generate control signals for the organs, physical actions, and basic survival-instinct-driven responses. This is also a scalable model that at the very basic level can support physical needs, and as more neural resources become available, as in the case of a human being, they can generate more abstract representations and intuitions out of their experiences, which we call as mental activities. 
+
+
+
+
+
+
+
+Let us look at the intuition behind the model. Memory is a main component of cognitive models. However, our biological memory cannot be a passive unit that needs to be managed by a different processor. It must be able to record as well as respond with related content. For example, if we start the sentence `Once upon a ...' our mind will automatically complete and produce the next few words. When we compute `seven times eight, as fifty-six' mentally, we are not doing mathematics in the mind; we are simply pulling a sequence that we memorized.  If we see someone from behind, based on the available features, the mind will complete the picture and recognize the person. If we take out our phone, our fingers will automatically open the usual app first. When we reach the washroom in the morning after waking up, we start to do a sequence of operations automatically. A memory that can respond based on an input probe can model this aspect of the mind.  The response of the memory can be used as the next probe to create a sequence of thought or activity. However, this does not mean our behavior is always predetermined. From the multiple associations activated by the memory, we can choose one that suits the external context. As the sequences repeatedly run through the AM-AN loop, the memory also forms shorter associations, as if repeated practice leads to expertise and efficiency.
+
+The model I present offers only a high-level organization for the mind, suitable for easy analysis and comprehension for the readers. I have explained how this model could potentially capture different cognitive aspects. The model I present is not significantly different from previous models, it has the same basic components. What makes it unique is the memory-attention loop which alone is used to represent all the behavioral aspects. We assume dedicated attention channels for different signal sources, but they form associations at the level of the memory. It is based on the assumption that though the entry level processing mechanism of these signals might differ, the fundamental mechanism behind the higher level processing could remain same. This results in a simple and lean model that is easy to analyse.  To show the plausibility of this model, we can compare it with the transformer architecture that is driving the latest breakthroughs in artificial intelligence (AI) research\cite{Vaswani2017_attentionIsAllYouNeed, niu2024largelanguagemodelscognitive}. Their architecture is based on a trainable content-addressable memory (CAM) which is a good example of an associative memory. They are also sequence generators that generate the next step in the sequence by paying attention to the past steps and an external probe. Over the years these AI models have evolved to have human-level language skills, logic, reasoning, and creativity at the same time and is being evaluated as a cognitive model\cite{niu2024largelanguagemodelscognitive}. Their limitations compared to human beings can be attributed to their lack of direct real-world experiences, emotions and the human survival instincts. Currently, they see the world largely through text descriptions. These models are also significantly energy inefficient compared to the human brain. An associative memory model based on biologically plausible neural networks is still under research. 
+
+\subsection{Is mind logical or emotional?}
+Based on the model, we can see the possibility that the human mind is neither logical nor emotional. Logic and emotions are only features of the mind, not the way the mind works. If something happens as per your expectations, you would call it logical. As our understanding of the laws of nature evolves, what we consider logical also changes. Someone with more experience in a particular area would make more accurate decisions and predictions in that field than someone with less experience. Our expectations can be modeled as past experiences stored in the AM as sequences with different levels of abstractions and intuitions (see also section \ref{sec:abs_intuition}). 
+
+If some of your outside experiences were strongly linked with inner experiences (Figure \ref{fig:model}(b)), repeating that pattern once again, or you remember about it, or your expectation about the future leads you there, it could once again create emotional responses. Empathy, where we recreate the painful situation of someone else within our mind, could also generate emotional responses. 
+
+So the mind could be viewed as a store house of experience sequences, which we depend on for our future actions. Based on the level of experiences, we show different degrees of logic and emotions. When we lack direct experiences, we may depend on the secondary experiences acquired via education or consumed via other media to decide our responses. Hence, the stories and images we project, especially via mass media outlets, have a strong impact on how the collective social conscience evolves. The challenge is that in the absence of an understanding of the nature of the mind, one fails to distinguish the thoughts generated by the stories and by the realities, and this may lead to misguided actions. Understanding the nature of the mind, one can also strive to distance oneself from the thought processes (past impressions) and to maximize the present experiences. 
+
+
+\subsection{Enhancing attention and memory}
+
+In general, the limited capacity of attention is viewed as a feature to filter the sensory overload, allowing one to focus on a given task. However, we follow a slightly different approach. A regular flow of thoughts can clog the attention bandwidth, thereby limiting the subject's capacity to attend to present situations. Therefore, if one can train their mind to consciously minimize the flow of thoughts, they can enhance attention and, as a direct consequence, enhance memory.  
+
+We model the mind with an attention network and associative memory in a feedback loop as shown in Figure \ref{fig:model}. If the attention network is focused on the output of the memory, it can generate a constant stream of thoughts. While past experiences can contain useful information, a regular replay in new formats will rarely generate new insights. If the memory contains negative or traumatic experiences, these trains of thought will replay those experiences, causing stress and anxiety. Since the attention networks have a limited capacity, these thought streams also reduce our ability to pay attention to external activities or learning objectives, reducing our ability to acquire new experiences. Hence, the memory will also be underutilized. The same feedback loop-based architecture would also explain why we generally find it challenging to stop the thoughts. 
+
+On the other hand, if one is focused on the present experiences, there is a possibility that the feedback loop stops.  However, we are dependent on the output of the memory to interpret the inputs, which may cause us to shift our focus to past impressions, and once again, we may become lost in the thought streams. During external activities, we seem to have found a middle ground where the attention bandwidth is shared between the past impressions and outer experiences. 
+
+The model suggests a possibility that being able to consciously keep aside the output of the memory will enhance one's attention. This could also potentially reduce the mental projections of negative experiences, reducing mental stress. Yoga, in its original form as a technology to enhance awareness, describes yoga as a state where thoughts or mental activities are minimal. Regular activities with mental focus are part of some of the methods suggested to reach such a state\cite{Vivekananda_1896}. Though limited, there are several pilot studies that show the potential of yoga and meditation to elevate attention and mental health\cite{Lazar_2005, Tang_2007, Sadhasivam_2021, Banks_2025}.
+
+	
+	\section{Conclusions}
+	We proposed a concise model for the mind that gives a simple framework for the readers to analyze the nature of their mind.  
+	
+	
+	%	\section*{Acknowledgment}
+	
+	
+	\section*{References}
+	\bibliographystyle{IEEEtran}
+	\bibliography{references}
+	
+	
+	
+		
+	\clearpage
+	
+	
+\end{document}
+
+
+
+
