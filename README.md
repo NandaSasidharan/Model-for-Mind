@@ -10,5 +10,5 @@ Working with this model has brought a lot of clarity for me. With this model, I 
 
 While the basic model is more or less final and the paper is almost complete, it is still a work in progress. Feel free to have a look. Let me know if you have any comments.
 
-- Nanda
+Nanda
 
