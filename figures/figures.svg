@@ -8,7 +8,7 @@
    version="1.1"
    id="svg5"
    inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
-   sodipodi:docname="figure_1_v4.svg"
+   sodipodi:docname="figures.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -26,12 +26,12 @@
      showgrid="false"
      showguides="true"
      inkscape:zoom="0.6968"
-     inkscape:cx="543.2"
-     inkscape:cy="-190.2"
-     inkscape:window-width="1280"
-     inkscape:window-height="778"
-     inkscape:window-x="-6"
-     inkscape:window-y="-6"
+     inkscape:cx="101.9"
+     inkscape:cy="430.5"
+     inkscape:window-width="1920"
+     inkscape:window-height="1046"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1">
     <inkscape:grid
@@ -242,12 +242,15 @@
      inkscape:groupmode="layer"
      id="layer1">
     <rect
-       style="fill:none;fill-opacity:0.4276;fill-rule:evenodd;stroke:none;stroke-width:0.499939;stroke-linecap:round;stroke-dasharray:1.00001, 0.500019"
+       style="fill:#ffffff;fill-opacity:0;fill-rule:evenodd;stroke:none;stroke-width:0.500015;stroke-linecap:round;stroke-dasharray:1.00016, 0.500096"
        id="rect2413"
-       width="161"
+       width="163.9"
        height="159.3"
-       x="27.34"
-       y="14.99" />
+       x="27.74"
+       y="13"
+       inkscape:export-filename="rect2413.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
     <rect
        style="opacity:1;fill:#ff8080;fill-opacity:1;fill-rule:evenodd;stroke:#ff8080;stroke-width:0.500313;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
        id="rect9358"
@@ -441,8 +444,8 @@
        id="path4872"
        sodipodi:nodetypes="cc" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.500298;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#RoundedArrow-6)"
-       d="m 143.8,126.9 h 26"
+       style="fill:none;stroke:#000000;stroke-width:0.500323;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#RoundedArrow-6)"
+       d="m 143.5,126.9 h 18.1"
        id="path4872-3"
        sodipodi:nodetypes="cc" />
     <path
@@ -475,9 +478,9 @@
        transform="translate(-59.94,0.3753)"><tspan
          x="204.1"
          y="56.8"
-         id="tspan3529"><tspan
+         id="tspan2452"><tspan
            style="font-weight:normal;font-family:Poppins;-inkscape-font-specification:Poppins"
-           id="tspan3527">Present experiences</tspan></tspan></text>
+           id="tspan2450">Present experiences</tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-weight:bold;font-size:4.2336px;line-height:1.25;font-family:'Source Serif Pro';-inkscape-font-specification:'Source Serif Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#ffff00;stroke-width:0.2646"
@@ -2166,33 +2169,33 @@
        d="m 53.02,134.8 7.7,2.8 h 8.26 l 7.86,-2.6"
        id="path8468" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.500298;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#RoundedArrow-6)"
-       d="m 143.8,118.9 h 26"
+       style="fill:none;stroke:#000000;stroke-width:0.500323;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#RoundedArrow-6)"
+       d="m 143.5,118.9 h 18.1"
        id="path9310"
        sodipodi:nodetypes="cc" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.500298;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#RoundedArrow-6)"
-       d="m 143.8,110.9 h 26"
+       style="fill:none;stroke:#000000;stroke-width:0.500323;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#RoundedArrow-6)"
+       d="m 143.5,110.9 h 18.1"
        id="path9314"
        sodipodi:nodetypes="cc" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.500298;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#RoundedArrow-6)"
-       d="m 143.8,103 h 26"
+       style="fill:none;stroke:#000000;stroke-width:0.500323;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#RoundedArrow-6)"
+       d="m 143.5,103 h 18.1"
        id="path9318"
        sodipodi:nodetypes="cc" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.500298;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#RoundedArrow-6)"
-       d="m 143.8,134.8 h 26"
+       style="fill:none;stroke:#000000;stroke-width:0.500323;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#RoundedArrow-6)"
+       d="m 143.5,134.8 h 18.1"
        id="path9324"
        sodipodi:nodetypes="cc" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.500298;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#RoundedArrow-6)"
-       d="m 143.8,142.6 h 26"
+       style="fill:none;stroke:#000000;stroke-width:0.500323;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#RoundedArrow-6)"
+       d="m 143.5,142.6 h 18.1"
        id="path9328"
        sodipodi:nodetypes="cc" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.500298;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#RoundedArrow-6)"
-       d="m 143.8,150.4 h 26"
+       style="fill:none;stroke:#000000;stroke-width:0.500323;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#RoundedArrow-6)"
+       d="m 143.5,150.4 h 18.1"
        id="path9332"
        sodipodi:nodetypes="cc" />
     <text
@@ -2238,5 +2241,49 @@
          x="173.7"
          y="226.7"
          id="tspan1288-5" /></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:4.2336px;line-height:1.25;font-family:'Source Serif Pro';-inkscape-font-specification:'Source Serif Pro Bold';letter-spacing:0px;word-spacing:0px;stroke-width:0.2646"
+       x="164.4"
+       y="117.2"
+       id="text815"><tspan
+         sodipodi:role="line"
+         id="tspan813"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Poppins;-inkscape-font-specification:'Poppins Bold';stroke-width:0.2646"
+         x="164.4"
+         y="117.2">Outer</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Poppins;-inkscape-font-specification:'Poppins Bold';stroke-width:0.2646"
+         x="164.4"
+         y="122.6"
+         id="tspan817">experiences</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:4.2336px;line-height:1.25;font-family:'Source Serif Pro';-inkscape-font-specification:'Source Serif Pro Bold';letter-spacing:0px;word-spacing:0px;stroke-width:0.2646"
+       x="164.4"
+       y="145.2"
+       id="text886"><tspan
+         sodipodi:role="line"
+         id="tspan882"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Poppins;-inkscape-font-specification:'Poppins Bold';stroke-width:0.2646"
+         x="164.4"
+         y="145.2">Inner</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Poppins;-inkscape-font-specification:'Poppins Bold';stroke-width:0.2646"
+         x="164.4"
+         y="150.6"
+         id="tspan884">experiences</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:6.35px;line-height:1.25;font-family:'Source Serif Pro';-inkscape-font-specification:'Source Serif Pro Bold';letter-spacing:0px;word-spacing:0px;stroke-width:0.2646"
+       x="-148.6"
+       y="152.8"
+       id="text892"
+       transform="rotate(-90)"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.35px;font-family:Poppins;-inkscape-font-specification:'Poppins Bold';stroke-width:0.2646"
+         x="-148.6"
+         y="152.8"
+         id="tspan890">...</tspan></text>
   </g>
 </svg>
