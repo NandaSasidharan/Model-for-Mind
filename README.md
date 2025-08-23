@@ -1,4 +1,4 @@
-When I transitioned from an engineering researcher to a classical hatha yoga teacher, I needed a more logical way to explain the significance of Yoga. 
+When I started offering classical hatha yoga, I needed a more logical way to explain the significance of Yoga. 
 
 As per Patanjali, the author of Yoga Sutras, Yoga is a state of a human being without mental activities or thoughts. But why is such a state important? For one to desire to achieve such a state, one has to either get a positive experience of the state or know the limitations of the current state.
 
